@@ -1,52 +1,26 @@
-locale: "en-US"
-title: Strata # Title of your site
-url: "http://yourdomain.com" # the base hostname & protocol for your site
-baseurl: "" # the subpath of your site, e.g. /blog/
-google_analytics_key: ""
+# Site settings
+name: Less Or More
+email: luoyan35714@126.com
+author: Freud Kang
+url: http://www.hifreud.com
+resume_site: http://www.hifreud.com/Resume.io/
+github: https://github.com/luoyan35714/
+baseurl: "/LessOrMore"
+description: Actually, less is more!
+meta_description: 康志华;个人博客;学而不思则罔;思而不学则殆;生命不止;折腾不休
+motto: It's our wits that make us men.
+banner: 学而不思则罔，思而不学则殆。
 
-# Default description in social shares for the jekyll-seo-tag gem
-description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+paginate: 10
 
-# Author details for the jekyll-seo-tag gem
-author:
-  name: Your Name
-  email: your-email@domain.com
-  twitter: # twitter username without the @ symbol
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
 
-# Social details for the jekyll-seo-tag gem
-social:
-  name: Strata Reloaded Template
-  links:
-    - https://github.com/comfusion/strata-reloaded-jekyll-template
+github_username: luoyan35714
 
-permalink: pretty
+# Build settings
+markdown: kramdown
 
-gems:
-  - "jekyll-feed"
-  - "jekyll-seo-tag"
-  - "jekyll-paginate"
-  - "jekyll-sitemap"
+baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
 
-# Jekyll SEO Tag
-webmaster_verifications:
-  google: # 1234
-  bing: # 1234
-  alexa: # 1234
-  yandex: # 1234
-
-# -----------
-# CloudCannon
-
-social_icons:
-  - Facebook
-  - Google Plus
-  - Instagram
-  - LinkedIn
-  - Pinterest
-  - Tumblr
-  - Twitter
-  - YouTube
-  - RSS
