@@ -6,7 +6,7 @@ entries:
   version: 
   folders:
 
-  - title:
+  - title: 
     output: pdf
     type: frontmatter
     folderitems:
@@ -19,24 +19,24 @@ entries:
       output: pdf
       type: frontmatter
 
-  - title: 前端
+  - title: 基础
     output: web, pdf
     folderitems:
 
-    - title: 
-      url: /index.html
+    - title: 发生了什么
+      url: /mydoc_what_happened.html
       output: web, pdf
       type: homepage
 
-    - title: Introduction
+    - title: 函数调用
       url: /mydoc_introduction.html
       output: web, pdf
 
-    - title: Supported features
+    - title: event loop
       url: /mydoc_supported_features.html
       output: web, pdf
 
-    - title: About the theme author
+    - title: macrotask与microtask
       url: /mydoc_about.html
       output: web, pdf
 

@@ -119,3 +119,12 @@ li.sidebarTitle {
 .navbar-inverse .navbar-toggle {
     border-color: #015CAE;
 }
+
+.footer_header{
+    width:120px;
+    height: auto;
+    border-radius: 8px;
+}
+.footer_warp{
+
+}
