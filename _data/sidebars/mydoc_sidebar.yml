@@ -28,12 +28,12 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: 函数调用
-      url: /mydoc_introduction.html
+    - title: URI
+      url: /mydoc_url.html
       output: web, pdf
 
-    - title: event loop
-      url: /mydoc_supported_features.html
+    - title: HTTP
+      url: /mydoc_http.html
       output: web, pdf
 
     - title: macrotask与microtask
