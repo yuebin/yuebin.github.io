@@ -13,11 +13,11 @@ folder: mydoc
 1. 用户输入[URL](./mydoc_url.html)后，从[DNS](https://baike.baidu.com/item/%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F/2251573)获取了tv.cctv.com域名对应的IP地址。
 2. 获取IP地址后，从http://tv.cctv.com获取协议为[HTTP](./mydoc_http.html)。
 3. 由于tv.cctv.com后面没有带端口号，故使用80端口进行访问。
-4. 访问目标服务并建立[TCP](mydoc_tcp.html)通讯。
+4. 访问目标服务并建立[TCP](./mydoc_http.html)通讯。
 5. 客户代理给Web服务器发送一条HTTP的GET请求。
 6. 服务器获取请求后，将对应的数据输出。
 7. HTTP的一次事务完成，断开网络连接。
-8. 代理根据HTTP返回的报文信息[解析处理数据](mydoc_agent.html)。
+8. 代理根据HTTP返回的报文信息[解析处理数据](./mydoc_agent.html)。
 9. 代理最终显示Web服务器返回的数据。
 
 
