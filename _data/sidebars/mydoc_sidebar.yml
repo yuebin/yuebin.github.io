@@ -39,17 +39,25 @@ entries:
     - title: 浏览器渲染
       url: /mydoc_agent.html
       output: web
-      
+
+    - title: 浏览器布局计算
+      url: /mydoc_layout.html
+      output: web
+
+    - title: 性能优化
+      url: /mydoc_performance.html
+      output: web
+
     - title: macrotask与microtask
       url: /mydoc_about.html
       output: web 
 
-  - title: Release Notes
+  - title: ThinkRight
     output: web 
     folderitems:
 
-    - title: 6.0 Release notes
-      url: /mydoc_release_notes_60.html
+    - title: 框架模块划分
+      url: /think_right_module.html
       output: web 
 
     - title: 5.0 Release notes

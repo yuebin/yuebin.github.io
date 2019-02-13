@@ -1,0 +1,49 @@
+---
+title: 性能优化
+tags: [性能优化]
+keywords: 性能优化
+sidebar: mydoc_sidebar
+permalink: mydoc_performance.html
+folder: mydoc
+---
+```
+ 在了解了浏览器关键路径之后，我们可以针对性的进行性能优化
+```
+
+
+#### 网络资源加载
+对于网络资源的优化，我们有很多种。如对HTML，JavaScript，CSS的压缩，优化。这些也是我们通常在都会使用的一写手段。
+
+#### html与CSS
+在渲染树的构建中，只有DOM和CSSOM同时具有时，才构建渲染树，这个会造成一定的性能影响。HTML和CSS都是阻塞渲染的资源。既然CSS是阻塞渲染的资源，我们期望尽快，尽早的将资源加载完成，我们除了通过上面的压缩的方法外，还可以通过对媒体的查询来将不同的资源进行分类，在页面首次加载时，将需要的样式进行阻塞加载。
+```
+<link href="style.css"    rel="stylesheet">
+<link href="style.css"    rel="stylesheet" media="all">
+<link href="portrait.css" rel="stylesheet" media="orientation:portrait">
+<link href="print.css"    rel="stylesheet" media="print">
+```  
+1. 第一个声明阻塞渲染。
+2. 第二个声明同样阻塞渲染。
+3. 第三个声明具有动态媒体查询，将在网页加载时计算。根据网页加载时设备的方向，portrait.css可能阻塞渲染也可能不阻塞渲染。
+4. 第四个声明只在打印网页是应用，网页首次在浏览器加载时，它不会阻塞渲染。  
+
+对于CSS的优化使用，我们处理通过上面的媒体查询以为，还有些其他建议值得学习。
+1. 将CSS置于文档的Head标签内，这样可以尽早的发出CSS资源请求。
+2. 虽然样式表中支持CSS的 import指令，但是尽量避免使用此指令，这样可以减少关键路径中网络请求的往返次数。
+3. 为了尽早完成首屏显示，可以将关键的CSS直接内联到HTML文档内。这样做不会增加网络请求的往返次数。
+
+#### JavaScript的优化
+默认情况下，当DOM解析器遇到Script标签是，会阻塞解析。并在JavaScript资源下载完成后将执行权交给JavaScript。但是我们可以通过给Script增加标记``async``来完事脚步的异步加载。
+
+#### 动画优化  
+在关键路径中，我们可以看出渲染主要步骤有Layout->Paint->Composite
+我们为了让动画看起来更加流畅，需要将动画的每一帧控制的16ms内，出去显示到屏幕的时间，我们只有10ms的时间来完成动画的控制的JS。  
+对于动画的优化，我们要注意一下几点：
+1. 修改页面布局结构或者导致绘图的动画属性特别消耗资源。
+2. 尽可能的坚持使用transform和opacity来完成动画。
+3. 使用will-change来告诉浏览器我们将对什么属性设置动画。
+
+关于动画的优化网络上有很多示例，这里只记录关键信息。另外附一个CSS的样式[触发器](https://csstriggers.com/)表用来查询样式修改会引起那些动作。
+
+
+{% include links.html %}

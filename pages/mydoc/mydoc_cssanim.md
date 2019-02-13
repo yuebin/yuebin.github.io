@@ -1,9 +1,9 @@
 ---
-title: 浏览器渲染
-tags: [浏览器渲染过程]
-keywords: 解析，HTMP Parse
+title: 动画优化
+tags: [动画优化]
+keywords: 动画优化
 sidebar: mydoc_sidebar
-permalink: mydoc_agent.html
+permalink: mydoc_cssanim.html
 folder: mydoc
 ---
 ```
@@ -49,29 +49,5 @@ folder: mydoc
 #### 渲染
 渲染其实是从绘制上下文到最终图像中的一部分，这儿提出来的主要原因是，后面的[动画优化](./mydoc_cssanim.html)会有用。  
 每个RenderLayer对象可以看做为一个图层。最终图像就是由各个不同的RenderLayer合成(Compositing)的。
-
-####  关键路径  
-根据上对浏览器渲染过程的了解，可以将浏览器渲染过程总结为以下关键路径，如下图：  
-![Key path view](./images/key_path.png "key path")  
-1. 请求网资源。
-2. 处理HTML标记并构建DOM树。
-3. 处理CSS标记并构建CSSOM树。
-4. 将DOM与CSSOM合并为渲染树RenderTree。
-5. 根据渲染树进行渲染。
-6. 合成最终图像呈现到用户界面。  
-上面过程我们把它可以叫做关键渲染路径，虽然实际工作中，这个过程要比这负责的多。如DOM 或 CSSOM 被修改，只能再执行一遍以上的某些有步骤，以确定需要加载那些新资源，那些像素需要在屏幕上进行重新渲染。但是我们了解了这个关键路径后，就可以对其做优化，这样就可以达到尽快的将内容渲染到屏幕上，用来缩短首次渲染屏幕刷新的时间，提供更好的用户体验。
-
-在步骤5中包含了一下三个小的步骤。需要特别注意一下：
-1. 布局计算并且生成RenderLayer。
-2. 绘图生成渲染图像。
-3. 合成最终图像。  
-步骤1将会生成不同的RenderLayer,我们可以把这个过程叫做Layout。  
-步骤2将会使用图形库绘制图像，在这个过程中，WebKit支持两种模式。如果使用CPU绘制，则为软件绘制。如果使用GPU绘制，则成为硬件加速绘制。  
-步骤3中会将不同的图层合成到一起生成最终的图像。这种使用合成技术的渲染称为合成渲染，WebKit就是使用这种技术来完成渲染的。  
-
-
-#### 总结：  
-通过对浏览器渲染过程和关键路径的了解，我们可以在实际项目中针对性的做出合理的[性能优化](./mydoc_performance.html)，从而提升项目质量。
-
 
 {% include links.html %}
