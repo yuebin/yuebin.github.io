@@ -1,2 +1,2 @@
 # yuebin 博客
-访问地址：https://yuebin.github.io/
+访问地址：https://yuebin.github.io/v
