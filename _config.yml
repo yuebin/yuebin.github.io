@@ -1,3 +1,5 @@
+github: [metadata]
+encoding: UTF-8
 
 repository: yuebin/yuebin.github.io
 output: web
@@ -58,6 +60,9 @@ kramdown:
  syntax_highlighter: rouge
 
 # filter used to process markdown. note that kramdown differs from github-flavored markdown in some subtle ways
+future: true
+jailed: false
+gfm_quirks: paragraph_end
 
 collections:
   tooltips:
