@@ -58,14 +58,14 @@ entries:
       url: /mydoc_about_ruby_gems_etc.html
       output: web
 
-  - title: ThinkRight
+  - title: MVVM框架设计
     output: web 
     folderitems:
 
-    - title: 框架模块划分
-      url: /think_right_module.html
+    - title: 实现一个简易MVVM
+      url: /mvvm_state_one.html
       output: web 
 
-    - title: 5.0 Release notes
-      url: /mydoc_release_notes_50.html
+    - title: TypeScript版本MVVM
+      url: /tow_way_binging_ts.html
       output: web  

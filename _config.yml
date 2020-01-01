@@ -106,9 +106,6 @@ defaults:
 sidebars:
 - home_sidebar
 - mydoc_sidebar
-- product1_sidebar
-- product2_sidebar
-- other
 
 description: ""
 # the description is used in the feed.xml file
