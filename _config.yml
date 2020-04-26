@@ -115,3 +115,4 @@ description: ""
 # baseurl: /documentation-theme-jekyll
 
 theme: jekyll-theme-cayman
+highlighter: rouge

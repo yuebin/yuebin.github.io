@@ -54,8 +54,12 @@ entries:
     output: web 
     folderitems:
 
-    - title: About Ruby, Gems, Bundler, etc.
-      url: /mydoc_about_ruby_gems_etc.html
+    - title: 对象不是类
+      url: /object_not_class.html
+      output: web
+      
+    - title: 类型转换
+      url: /type_conversion.html
       output: web
 
   - title: MVVM框架设计
